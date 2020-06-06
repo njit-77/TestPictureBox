@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:TestPictureBox"
         xmlns:Forms="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms" x:Class="TestPictureBox.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="800" ResizeMode="CanMinimize">
 
     <WindowsFormsHost>
         <WindowsFormsHost.Background>
@@ -15,6 +15,10 @@
                 <GradientStop Color="#FF1C1D1F" Offset="1"/>
             </LinearGradientBrush>
         </WindowsFormsHost.Background>
-        <Forms:PictureBox/>
+        <Forms:PictureBox MouseEnter="PictureBox_MouseEnter"
+                          MouseDown="PictureBox_MouseDown"
+                          MouseMove="PictureBox_MouseMove"
+                          MouseWheel="PictureBox_MouseWheelMove"
+                          Paint="PictureBox_Paint"/>
     </WindowsFormsHost>
 </Window>
